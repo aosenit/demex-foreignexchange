@@ -6,7 +6,7 @@
 
 body{
     font-size: 12px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     width: 100%;
     height: 100vh;
 }
@@ -17,32 +17,37 @@ img{
 button{
     width: fit-content;
     height: fit-content;
-    padding: .5rem 3rem;
+    padding: .3rem 1rem;
     text-align: center;
     border-radius: 2rem;
     border: none;
-    background-color: brown;
+    background-color:	rgb(139, 76, 13);
     cursor: pointer;
     transition: .5s ease-in;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6),
     0px 0px 5px 0px rgba(0, 0, 0, 0.6);
 
+
     
     a{
         text-decoration: none;
         color: white;
-        font-size: clamp(1rem, 1.5vw, 2rem);
+        font-size: clamp(.5rem, 1.2vw, 2rem);
         font-weight: bolder;
     }
 }
 
 button:hover{
     background-color: white;
-    border: 1px solid brown;
+    border: 1px solid rgb(139, 76, 13);
   
     a{
-        color: brown;
+        color: rgb(139, 76, 13);
     }
+}
+
+p{
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 .container{
@@ -80,67 +85,88 @@ button:hover{
     
     .hero{
         height: calc(100vh - 4rem);
+        background-image: url(https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: black;
+        font-size: clamp(1.1rem, 1.4vw, 2rem);
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        .heroFlex{
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            padding: 1rem;
-    
-            .heroText{
-                padding: 0 1rem;
-                text-align: center;
+        position: relative;
+
+        .heroText{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 3rem;
+            height: 100%;
+            z-index: 2;
+            position: relative;
+            color: white;
+
+            .flexText{
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-    
+                justify-content: space-between;
+                align-items:center;
+                text-align: justify;
+                
+
+                .dimexText{
+                    padding-right: 2rem;
+                }
+
                 h2{
-                    padding-bottom: .5rem;
-                    font-size: clamp(1.5rem, 2.2vw, 2.7rem);
-                    color:  brown;
+                    color: rgb(139, 76, 13);
+                    padding-bottom: .6rem;
+                    font-size: clamp(2rem, 2.7vw, 3.2rem);
                 }
+            }
 
-                p{
-                    padding-bottom: 1rem;
-                    font-size: clamp(1rem, 1.5vw, 2rem);
-                }
-
-                h4{
-                    font-size: clamp(1rem, 1.5vw, 2rem);
-                    padding-bottom: .5rem;
-                }
+            .flexBtn{
+                margin-top: 3rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
 
                 button{
-                    margin-bottom: .5rem;
+                    padding: .8rem 3rem ;
                 }
             }
-
-            .heroImg{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               background-image: url(https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
-               background-position: center;
-               clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-               
-            //    img{
-            //     width: 60%;
-            //     height: 60%;
-            //     object-fit: cover;
-            //     object-position: center;
-               
-            //    }
-            }
-       }   } 
+        }
+       
+        .blur{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            
+        }          
+            
+    }
+        
 }
 
 footer{
     text-align: center;
     padding: 1rem;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
+}
+
+@media screen and (max-width:520px) {
+
+    .heroText{
+      
+        .flexText{
+          flex-direction: column;
+
+          .dimexText{
+            padding-bottom: 1rem;
+          }
+           
+        }
+    }
 }

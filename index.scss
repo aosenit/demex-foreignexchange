@@ -145,7 +145,7 @@ p{
 
             .flexBtn{
                 margin: 0 auto;
-                margin-top: 4.5rem;
+                margin-top: 3.5rem;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
@@ -245,6 +245,6 @@ footer{
     .flexBtn{
         display: flex !important;
         flex-direction: column;
-        margin-top: 2rem !important;
+        margin-top: 1rem !important;
     }
 }

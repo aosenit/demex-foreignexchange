@@ -162,7 +162,7 @@ p {
 
 .container .hero .heroText .flexBtn {
   margin: 0 auto;
-  margin-top: 4.5rem;
+  margin-top: 3.5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -254,7 +254,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 2rem !important;
+    margin-top: 1rem !important;
   }
 }
 /*# sourceMappingURL=index.css.map */
